@@ -50,7 +50,9 @@ int main(int argc, char **argv)
     outfile.open(text_file);
 
     // Write the binary to the file
-    outfile << binary_buffer;
+    outfile << binary_buffer << std::endl;
+    outfile << binary_number.to_ulong() ;
+    
 
     // Close the file
     outfile.close();
